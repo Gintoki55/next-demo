@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +39,13 @@ export default function RootLayout({ children }) {
             ))}
           </div>
         </div>
-        {children}
+        <Suspense
+        fallback={
+          <Loading/>
+        }
+        >
+          {children}
+        </Suspense>
       </body>
     </html>
   );

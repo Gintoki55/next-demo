@@ -2,7 +2,8 @@ import React from 'react'
 export const metadata = {
     title: 'Article page',
 }
-function ArticlePage() {
+async function ArticlePage() {
+  await new Promise(resolve => setTimeout(resolve, 5000));
   return (
     <div
     className='min-h-screen flex justify-center items-center bg-yellow-600 flex-col gap-20'>

@@ -7,7 +7,7 @@ export default function Loading() {
     <div className="flex flex-col items-center justify-center h-[80vh] bg-white">
       {/* الشعار */}
       <Image
-        src="globe.svg" 
+        src="/globe.svg" 
         alt="Loading..."
         width={150} 
         height={150}

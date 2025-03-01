@@ -1,11 +1,21 @@
-import React from 'react'
+"use client";
+import Image from "next/image";
+import { BarLoader } from "react-spinners";
 
-function loading() {
+export default function Loading() {
   return (
-    <div className='absolute w-full h-full z-50 bg-gray-400 flex justify-center items-center'>
-        <h1 className='text-6xl font-semibold'>loading...</h1>
+    <div className="flex flex-col items-center justify-center h-[80vh] bg-white">
+      {/* الشعار */}
+      <Image
+        src="globe.svg" 
+        alt="Loading..."
+        width={150} 
+        height={150}
+        className="mb-4"
+      />
+      
+      {/* الـ Loader */}
+      <BarLoader color="#184b72" width={150} />
     </div>
-  )
+  );
 }
-
-export default loading
